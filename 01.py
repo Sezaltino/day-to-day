@@ -4,3 +4,4 @@ def filter_pairs(numbers):
 if __name__ == "__main__":
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 23, 28]
     results = filter_pairs(numbers)
+    print(results)
