@@ -16,6 +16,7 @@ def normalize_name(names):
             condition = True if letter.isdigit() else False
 
         if not condition:
+            #TODO rever algoritmo para identificar mais de 2 nomes (ideia full_name = name.split())
             name = name.split()
             first_name = name[0]
             last_name = name[1]
