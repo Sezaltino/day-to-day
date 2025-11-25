@@ -1,4 +1,5 @@
 '''
+Exercício 2 – Normalizar Textos
 📋 Contexto
 Você recebeu uma planilha de cadastro de clientes, mas os nomes vieram bagunçados: com espaços extras, letras maiúsculas e minúsculas misturadas. Antes de salvar no banco de dados, você precisa padronizar tudo.
 🎯 Objetivo
