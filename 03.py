@@ -1,5 +1,5 @@
 '''
-Dia 3 – Contagem de Palavras
+Exercício 3 – Contagem de Palavras
 📋 Contexto
 Você está analisando feedbacks de clientes e precisa descobrir quais palavras aparecem com mais frequência para identificar padrões.
 🎯 Objetivo

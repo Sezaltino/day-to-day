@@ -1,3 +1,24 @@
+'''
+📋 Contexto
+Você recebeu uma planilha de cadastro de clientes, mas os nomes vieram bagunçados: com espaços extras, letras maiúsculas e minúsculas misturadas. Antes de salvar no banco de dados, você precisa padronizar tudo.
+🎯 Objetivo
+Crie uma função normalizar_nomes(nomes) que receba uma lista de nomes e retorne uma lista limpa, onde cada nome:
+
+Não tenha espaços no início ou fim
+Tenha apenas a primeira letra maiúscula
+Esteja em formato consistente
+
+📥 Entrada Esperada
+pythonnomes = [
+    "  MARIA SILVA  ",
+    "joão SANTOS",
+    "   Ana   Costa   ",
+    "PEDRO oliveira  "
+]
+📤 Saída Esperada
+python["Maria Silva", "João Santos", "Ana Costa", "Pedro Oliveira"]
+'''
+
 def normalize_name(names):
 
     names_filted = []
