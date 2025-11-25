@@ -1,14 +1,20 @@
 def formatter(name):
-    name = name.casefold()
-    name = name.strip()
-    name = name.capitalize()
+    name = name.casefold().strip().capitalize()
     return name
 
 def normalize_name(names):
 
     names_filted = []
+    names_filted2 = []
     condition = False
 
+    #first solution
+    name_filted_strings = list(name.split() for name in names)
+    for name in name_filted_strings:
+        names_filted2.append(list(map(lambda x: x.casefold().strip().capitalize(), name)))
+    names_filted2 = list(map(lambda x: " ".join(x), names_filted2))
+
+    #second solution
     for name in names:
         for letter in name:
             if condition:
@@ -33,5 +39,4 @@ if __name__ == "__main__":
         "   Ana   Costa   ",
         "PEDRO oliveir4  "
         ]
-    
     print(normalize_name(names))
