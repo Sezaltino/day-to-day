@@ -18,3 +18,26 @@ python{
 }
 '''
 
+def contagem_palavras(text):
+    text_split = text.split(" ")
+    analyze = {}
+    for word in text_split:
+        print(word)
+        if analyze.get(word) is not None:
+            print(analyze.get(word))
+            analyze[word]+=1
+        else:
+            analyze[word]=1
+
+    print(analyze)
+    return analyze
+    
+
+
+
+
+
+if __name__ == "__main__":
+    #pythontexto = input("Digite sua frase: ")
+    pythontexto = "python é legal python é poderoso e python é muito usado"
+    contagem_palavras(pythontexto)
