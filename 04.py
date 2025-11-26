@@ -32,10 +32,7 @@ if __name__ == "__main__":
     ]
     discount_product = float(input("Digite o percentual de desconto: "))
 
-    print(products)
-
     while discount_product < 0 or discount_product > 100:
         discount_product = float(input("Digite o percentual de desconto: "))
 
-    
     print(apply_discounts(products, discount_product))
