@@ -18,7 +18,10 @@ python[
 ]
 '''
 def adjustment_prices(products, percent):
-    return list(map(lambda product: {"nome": product.get("nome",""), "preco" : product.get("preco", 0) * (1 + percent/100)}, products))
+    return list(map(lambda product: {
+        **product,
+        "preco" : product.get("preco", 0) * (1 + percent/100)
+        }, products))
 
 if __name__ == "__main__":
 
