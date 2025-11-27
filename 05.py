@@ -19,7 +19,7 @@ python[
 ]
 '''
 def filter_premium(products):
-        return list(filter(lambda x: x.get("preco") >= 100, products))
+        return list(filter(lambda x: x.get("preco", 0) >= 100, products))
 
 if __name__ == "__main__":
     pythonprodutos = [
