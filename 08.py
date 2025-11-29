@@ -12,11 +12,15 @@ import re
 
 def scraper_numbers(phrase):
 
-    return list(word for word in re.sub("[!?.,:;%]", "", phrase).split() if word.isdigit())
+    return list(word for word in re.sub("[!?.,:;%]", " ", phrase).split() if word.isdigit())
     #return list(x for x in phrase if x.isdigit())
 
 
 if __name__ == "__main__":
     pythontext = "A empresa vendeu 150 unidades em 2024, com lucro de 45% e crescimento de 12.5 pontos."    
 
+
+    print("\nprimeira forma")
     print(scraper_numbers(pythontext))
+    print("\nsegunda forma")
+    print(list(filter(lambda x: x.isdigit(), re.sub("[!?.,:;%]", " ", pythontext).split())))
