@@ -27,20 +27,22 @@ remover_tarefa(tarefas, 2)
 # Listar
 listar_tarefas(tarefas)
 '''
-def add_tasks():
+def add_tasks(tasks, new_task):
     pass
 
-def update_taks():
+def update_taks(tasks, id_task, new_data):
     pass
 
-def get_tasks():
-    pass
-
-def delete_tasks():
+def get_tasks(tasks, id_or_name_task = None):
+    if id_or_name_task is not None:
+        if id_or_name_task.isdigit():
+            select_task = [task for task in tasks if task.get("id") == id_or_name_task] 
+            print(select_task)
+def delete_tasks(tasks, id_task):
     pass
 
 if __name__ == "__main__":
-    pythontarefas = [
+    pythontasks = [
     {"id": 1, "descricao": "Estudar Python", "concluida": False},
     {"id": 2, "descricao": "Fazer compras", "concluida": True}
     ]
@@ -61,8 +63,36 @@ if __name__ == "__main__":
         leave = False if option == "5" else True
 
         if option.isdigit():
-            if option == "1": pass
-            elif option == "2": pass 
+            if option == "1":
+                insert = input("Insira a tarefa: ")
+                add_tasks(pythontasks, insert)
+            elif option == "2": 
+                print("\nTarefas: ")
+                for tasks in pythontasks:
+                    for key, value in tasks.items():
+                        print(str(key) + ": " + str(value)) 
+                    print("\n")
+                update = input("Insira o nome ou o id da tarefa que quer alterar: ")
+                
+                print("Task Selecionada:\n")
+                print(get_tasks(pythontasks, update))
+
+                print(""""
+                O que deseja alterar:
+                1 - Nome
+                2 - Status
+                """)
+                option = input("Selecione a option desejada: ")
+
+                if option.isdigit():
+                    if option == 1: update_data = {"descricao": input("Insira o novo nome")}
+                    elif option == 2: update_data = {"concluida": True}
+                    else: print("Option inválida, selecione 1 ou 2")
+                else:
+                    print("Caracteres não são permitidos, insira um número")
+
+                update_taks(pythontasks, update if update.isdigit() else get_tasks(tasks, update), update_taks)
+
             elif option == "3": pass
             elif option == "4": pass
             else: print("\nOption inválida, escolhe entre 1 e 5!\n")
