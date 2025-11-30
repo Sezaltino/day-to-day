@@ -27,17 +27,22 @@ remover_tarefa(tarefas, 2)
 # Listar
 listar_tarefas(tarefas)
 '''
+#TODO make the def tomorrow
 def add_tasks(tasks, new_task):
     pass
 
+#TODO make the def tomorrow
 def update_taks(tasks, id_task, new_data):
     pass
 
+#TODO fix the first def
 def get_tasks(tasks, id_or_name_task = None):
     if id_or_name_task is not None:
         if id_or_name_task.isdigit():
             select_task = [task for task in tasks if task.get("id") == id_or_name_task] 
             print(select_task)
+
+#TODO make the def tomorrow
 def delete_tasks(tasks, id_task):
     pass
 
