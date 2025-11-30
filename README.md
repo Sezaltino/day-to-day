@@ -55,6 +55,11 @@ Cada arquivo `.py` contém:
 | `day5_ex2_extract_numbers.py` | Extrair Números de Texto | Regex, filter(), lambda, duas abordagens |
 | `day5_ex3_combine_data.py` | Combinar Dados com zip() | zip(), list comprehension, dicionários |
 
+### Day 6 (29/11/2025)
+| Arquivo | Descrição | Conceitos Praticados |
+|---------|-----------|---------------------|
+| `day6_ex1_crud.py` | CRUD de Tarefas (em progresso) | Manipulação de listas de dicionários, input do usuário, estruturas condicionais, menu interativo, busca e filtragem |
+
 ## Tecnologias
 
 - Python 3.x
@@ -94,6 +99,7 @@ Este projeto começou em **23 de novembro de 2025** e continua em evolução con
 - **Day 3 (25/11)**: Refatorações e melhorias de código existente
 - **Day 4 (26/11)**: Funções de alta ordem - map, filter, lambda
 - **Day 5 (28/11)**: Técnicas avançadas - regex, zip, ordenação customizada
+- **Day 6 (29/11)**: Sistema CRUD - gerenciamento de tarefas com menu interativo
 
 ## Próximos Passos
 
